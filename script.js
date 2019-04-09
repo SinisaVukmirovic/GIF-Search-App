@@ -22,7 +22,7 @@ function displayGif() {
 
 async function giphy() {
     let term = searchInput.value;
-    let apiUrl = `http://api.giphy.com/v1/gifs/search?q=${term}&api_key=CLPCegGycqjrikeN3HIOGA2VqXpxcfFT&limit=1`;
+    let apiUrl = `https://cors-anywhere.herokuapp.com/http://api.giphy.com/v1/gifs/search?q=${term}&api_key=CLPCegGycqjrikeN3HIOGA2VqXpxcfFT&limit=1`;
 
     let response = await fetch(apiUrl);
     let data = await response.json();
