@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #212121;
+    font-family: sans-serif;
+    color: #eee;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.app h1 {
+    margin: 1rem 0;
+    color: coral;
+}
+
+.app #search-form {
+    margin: 2rem 0;
+}
+
+#search-form #search-input {
+    width: 20rem;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+}
+#search-form #search-btn {
+    padding: .5rem 1rem;
+    background: coral;
+    color: #212121;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.app #gif {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+    .app {
+        max-width: 40rem;
+    }
+}
