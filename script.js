@@ -1,6 +1,7 @@
 let searchForm = document.querySelector('#search-form');
 let searchInput = document.querySelector('#search-input');
 let gif = document.querySelector('#gif');
+let errorElem = document.querySelector('#error');
 
 searchForm.addEventListener('submit', e => {
     e.preventDefault();
@@ -13,10 +14,14 @@ searchForm.addEventListener('submit', e => {
 
 function displayGif() {
     giphy()
-    .then(results => gif.setAttribute('src', results.data[0].images.original.url))
+    .then(results => {
+        gif.setAttribute('src', results.data[0].images.original.url);
+        errorElem.textContent = '';
+    })
     .catch(err => {
         console.error(err);
         gif.setAttribute('src', 'giphy.png');
+        errorElem.textContent = 'Sorry, no GIF associated with that term!';
     }); 
 }
 
